@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Menu</title>
+    <!-- Use Tailwind CSS for a minimalist design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Google Fonts for Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Century Gothic', 'CenturyGothic', sans-serif;
+            background: linear-gradient(to bottom, #fcfcfc, #f5f5f5); /* A soft gradient background */
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.4em; /* Increased letter spacing for the title */
+            color: #8B0000; /* A dark, matte bordeaux color */
+            font-size: 2.25rem; /* Slightly larger for emphasis */
+        }
+        h2 {
+            font-weight: 800; /* Use a heavier weight to make it stand out */
+            color: #8B0000; /* Matching the main title color */
+            font-size: 1.5rem; /* Larger font size for the cocktail name */
+        }
+        p.text-sm {
+            font-size: 0.9rem; /* Slightly larger text for better readability */
+            line-height: 1.25; /* Improved line height for better spacing */
+        }
+        /* Style for active navigation button */
+        .nav-button.active {
+            @apply bg-stone-700 text-white;
+        }
+        .nav-button:hover:not(.active) {
+            @apply bg-stone-200 text-stone-800 transform scale-105; /* Add hover effect */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 md:p-12">
+    <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+        <!-- Main Menu Title -->
+        <h1 class="font-extrabold text-center uppercase mb-8 pb-4 border-b border-stone-200">
+            Liquid Poetry
+        </h1>
+
+        <!-- Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="nav-button py-2 px-6 rounded-full text-sm font-semibold transition-all duration-200 border border-stone-300 bg-stone-100 text-stone-700" onclick="showPage('caipiroskas-page')">Caipiroskas</button>
+            <button class="nav-button py-2 px-6 rounded-full text-sm font-semibold transition-all duration-200 border border-stone-300 bg-stone-100 text-stone-700" onclick="showPage('margaritas-page')">Margaritas</button>
+            <button class="nav-button py-2 px-6 rounded-full text-sm font-semibold transition-all duration-200 border border-stone-300 bg-stone-100 text-stone-700" onclick="showPage('daiquiris-page')">Daiquiris</button>
+            <button class="nav-button py-2 px-6 rounded-full text-sm font-semibold transition-all duration-200 border border-stone-300 bg-stone-100 text-stone-700" onclick="showPage('mezcalitas-espresso-page')">Mezcalitas & Espresso</button>
+        </div>
+
+        <!-- Page 1: Caipiroskas -->
+        <div id="caipiroskas-page" class="menu-page">
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Passion Fruit Caipiroska</h2>
+                <p class="text-sm italic text-stone-600">
+                    Vodka, agave syrup, passion fruit pulp, fresh lime
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    A Brazilian-inspired masterpiece that muddles tropical passion fruit with zesty lime, creating an exotic escape in every sip.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Raspberry Caipiroska</h2>
+                <p class="text-sm italic text-stone-600">
+                    Vodka, agave syrup, fresh raspberries, fresh lime
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Fresh raspberries burst with every taste in this vibrant twist on Brazil's national cocktail, delivering pure summer in a glass.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Blackberry Caipiroska</h2>
+                <p class="text-sm italic text-stone-600">
+                    Vodka, agave syrup, fresh blackberries, fresh lime
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Dark, rich blackberries create a sophisticated berry explosion that balances tart lime with deep, luscious fruit flavors.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Strawberry Caipiroska</h2>
+                <p class="text-sm italic text-stone-600">
+                    Vodka, agave syrup, fresh strawberries, fresh lime
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Sweet, sun-ripened strawberries meet crisp lime in this refreshing cocktail that tastes like a perfect summer day.
+                </p>
+            </div>
+        </div>
+
+        <!-- Page 2: Margaritas -->
+        <div id="margaritas-page" class="menu-page hidden">
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Regular Margarita</h2>
+                <p class="text-sm italic text-stone-600">
+                    Tequila blanco, Cointreau, fresh lime juice, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    The timeless classic that never goes out of style – perfectly balanced citrus and agave with a hint of orange sophistication.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Passion Fruit Margarita</h2>
+                <p class="text-sm italic text-stone-600">
+                    Tequila blanco, Grand Marnier, passion fruit puree, fresh lime juice, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Transport yourself to a tropical paradise with this exotic twist that adds tangy passion fruit magic to the beloved margarita.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Strawberry Frozen Margarita</h2>
+                <p class="text-sm italic text-stone-600">
+                    Tequila blanco, triple sec, fresh lime juice, frozen strawberries, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    A frozen fiesta of sweet strawberries and smooth tequila that's like summer vacation in a glass.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Pineapple Frozen Margarita</h2>
+                <p class="text-sm italic text-stone-600">
+                    Tequila blanco, triple sec, fresh lime juice, frozen pineapple, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Tropical pineapple meets Mexican tradition in this icy-cold cocktail that screams beachside bliss.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Blackberry Frozen Margarita</h2>
+                <p class="text-sm italic text-stone-600">
+                    Tequila blanco, triple sec, fresh lime juice, frozen blackberries, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Rich, dark berries create a stunning purple cocktail that's both sophisticated and refreshingly fun.
+                </p>
+            </div>
+        </div>
+
+        <!-- Page 3: Daiquiris -->
+        <div id="daiquiris-page" class="menu-page hidden">
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Strawberry Frozen Daiquiri</h2>
+                <p class="text-sm italic text-stone-600">
+                    White rum, fresh lime juice, frozen strawberries, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Cuban elegance meets berry sweetness in this smooth, frozen cocktail that's pure liquid sunshine.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Pineapple Frozen Daiquiri</h2>
+                <p class="text-sm italic text-stone-600">
+                    White rum, fresh lime juice, frozen pineapple, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Escape to the Caribbean with this tropical blend that captures the essence of island life in every frosty sip.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Passion Fruit Frozen Daiquiri</h2>
+                <p class="text-sm italic text-stone-600">
+                    White rum, fresh lime juice, frozen passion fruit, agave nectar, passion fruit liqueur
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    An exotic frozen paradise that doubles down on passion fruit's intense tropical flavor for the ultimate escape.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Blackberry Frozen Daiquiri</h2>
+                <p class="text-sm italic text-stone-600">
+                    White rum, fresh lime juice, frozen blackberries, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Deep, luxurious blackberries create a frozen cocktail that's both indulgent and refreshingly tart.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Regular Daiquiri</h2>
+                <p class="text-sm italic text-stone-600">
+                    White rum, fresh lime juice, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Hemingway's favorite cocktail in its purest form – a perfectly balanced trinity of rum, lime, and sweetness.
+                </p>
+            </div>
+        </div>
+
+        <!-- Page 4: Mezcalitas & Espresso Martini -->
+        <div id="mezcalitas-espresso-page" class="menu-page hidden">
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Passion Fruit Frozen Mezcalita</h2>
+                <p class="text-sm italic text-stone-600">
+                    Mezcal, frozen passion fruit puree, agave nectar, fresh orange juice
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Smoky mezcal meets tropical passion fruit in this adventurous frozen cocktail that's both exotic and mysteriously delicious.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Spicy Pineapple Frozen Mezcalita</h2>
+                <p class="text-sm italic text-stone-600">
+                    Mezcal, frozen pineapple, agave nectar, fresh lime juice, chili flakes
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    Fire meets ice in this bold cocktail where sweet pineapple and smoky mezcal dance with a thrilling spicy kick.
+                </p>
+            </div>
+            <div class="mb-8">
+                <h2 class="leading-tight mb-1">Espresso Martini</h2>
+                <p class="text-sm italic text-stone-600">
+                    Vodka, coffee liqueur, fresh espresso, agave syrup
+                </p>
+                <p class="text-sm italic text-stone-500 mt-1">
+                    The perfect pick-me-up cocktail that combines the sophistication of a martini with the energy of your favorite coffee shop.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the selected page and highlight the active button
+        function showPage(pageId) {
+            // Get all page elements and hide them
+            const pages = document.querySelectorAll('.menu-page');
+            pages.forEach(page => page.classList.add('hidden'));
+
+            // Get all nav buttons and remove the 'active' state classes
+            const navButtons = document.querySelectorAll('.nav-button');
+            navButtons.forEach(button => {
+                button.classList.remove('active', 'bg-stone-700', 'text-white');
+                button.classList.add('bg-stone-100', 'text-stone-700');
+            });
+
+            // Show the selected page
+            document.getElementById(pageId).classList.remove('hidden');
+            
+            // Add the 'active' state classes to the clicked button
+            const activeButton = document.querySelector(`[onclick="showPage('${pageId}')"]`);
+            activeButton.classList.add('active', 'bg-stone-700', 'text-white');
+            activeButton.classList.remove('bg-stone-100', 'text-stone-700');
+        }
+
+        // Initialize with the first page visible
+        window.onload = function() {
+            showPage('caipiroskas-page');
+        };
+    </script>
+</body>
+</html>
